@@ -1,0 +1,170 @@
+.store-item {
+    max-width: 980px;
+    border-radius: 4px;
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,.18);
+    margin: 20px auto;
+    padding: 20px;
+    transition: all 350ms ease;
+}
+
+.store-item:hover {
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,.32);
+}
+
+.store-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 9;
+}
+
+.store-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.store-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 350ms ease;
+}
+
+.store-img img:hover {
+    filter: brightness(75%);
+}
+
+.store-details {
+    flex-grow: 8;
+    margin-left: 15px;
+}
+
+.store-header, .store-footer-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.store-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.rating > .fa {
+    margin-right: 4px
+}
+
+.rating > .fa:nth-child(5) {
+    margin-right: 0
+}
+
+.fa-star.checked {
+    color: red
+}
+
+.store-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.store-website {
+    color: black;
+    text-decoration: none;
+}
+
+.store-flag img {
+    width: auto;
+    height: 17px
+}
+
+/***** Tooltip Styles - start *****/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext, .tooltip .tooltiptext-left {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext, .tooltip:hover .tooltiptext-left {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext {
+    width: 120px;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: .9rem;
+}
+
+.tooltip .tooltiptext-left {
+    width: auto;
+    padding: 5px 10px 7px;
+    top: -5px;
+    right: 125%;
+    font-size: .9rem;
+}
+/***** Tooltip Styles - end *****/
+
+.store-best-selling table, .store-best-selling th, .store-best-selling td {
+    border: 1px solid lightgray;
+    padding: 8px;
+}
+
+.store-best-selling td {
+    width: 50%
+}
+
+.store-best-selling th {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.store-best-selling table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.empty-list {
+    margin-top: 20px
+}
+
+@media only screen and (max-width: 650px) {
+    .store-item {
+        margin: 20px
+    }
+    .store-main {
+        flex-direction: column;
+    }
+    .store-details {
+        margin: 0
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .store-header, .store-footer, .store-footer-details {
+        flex-direction: column;
+    }
+    .store-footer-details {
+        margin-bottom: 10px
+    }
+}
